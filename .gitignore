@@ -1,0 +1,21 @@
+# JMeter
+*.jtl
+*.log
+/results/
+
+# Java
+*.class
+*.jar
+target/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Influx/Grafana Data
+/data/influxdb/*
+/data/grafana/*
+!/data/influxdb/.gitkeep
+!/data/grafana/.gitkeep

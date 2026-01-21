@@ -1,0 +1,69 @@
+version: '3.8'
+
+services:
+  jmeter-master:
+    build: .
+    container_name: jmeter-master
+    environment:
+      - MODE=MASTER
+    volumes:
+      - ./scripts:/scripts
+      - ./configs:/configs
+      - ./results:/results
+    networks:
+      - jmeter-net
+    depends_on:
+      - jmeter-slave-1
+      - jmeter-slave-2
+    ports:
+      - "60000:60000"
+
+  jmeter-slave-1:
+    build: .
+    container_name: jmeter-slave-1
+    environment:
+      - MODE=SLAVE
+    networks:
+      - jmeter-net
+    ports:
+      - "1099:1099"
+      - "50000:50000"
+
+  jmeter-slave-2:
+    build: .
+    container_name: jmeter-slave-2
+    environment:
+      - MODE=SLAVE
+    networks:
+      - jmeter-net
+    ports:
+      - "1100:1099"
+      - "50001:50000"
+
+  influxdb:
+    image: influxdb:1.8
+    container_name: influxdb
+    environment:
+      - INFLUXDB_DB=jmeter
+    volumes:
+      - ./data/influxdb:/var/lib/influxdb
+    networks:
+      - jmeter-net
+    ports:
+      - "8086:8086"
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    volumes:
+      - ./data/grafana:/var/lib/grafana
+    networks:
+      - jmeter-net
+    ports:
+      - "3000:3000"
+    depends_on:
+      - influxdb
+
+networks:
+  jmeter-net:
+    driver: bridge
