@@ -12,33 +12,22 @@ services:
       - ./results:/results
     networks:
       - jmeter-net
-    depends_on:
-      - jmeter-slave-1
-      - jmeter-slave-2
     ports:
       - "60000:60000"
 
-  jmeter-slave-1:
+  jmeter-slave:
     build: .
-    container_name: jmeter-slave-1
     environment:
       - MODE=SLAVE
     networks:
       - jmeter-net
     ports:
-      - "1099:1099"
-      - "50000:50000"
-
-  jmeter-slave-2:
-    build: .
-    container_name: jmeter-slave-2
-    environment:
-      - MODE=SLAVE
-    networks:
-      - jmeter-net
-    ports:
-      - "1100:1099"
-      - "50001:50000"
+      - "1099"
+      - "50000"
+    # Use deploy for scaling (works with docker-compose up --scale)
+    deploy:
+      mode: replicated
+      replicas: 2
 
   influxdb:
     image: influxdb:1.8
@@ -55,8 +44,13 @@ services:
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_USER=admin
     volumes:
       - ./data/grafana:/var/lib/grafana
+      - ./grafana-provisioning/datasources:/etc/grafana/provisioning/datasources
+      - ./grafana-provisioning/dashboards:/etc/grafana/provisioning/dashboards
     networks:
       - jmeter-net
     ports:
