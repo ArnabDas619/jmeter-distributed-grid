@@ -1,16 +1,27 @@
 # Grafana Visualization Guide for JMeter Tests
 
 ## Overview
-InfluxDB is now automatically configured as a data source in Grafana. When you start the containers, Grafana will have the `InfluxDB-JMeter` datasource pre-configured and ready to use.
+InfluxDB is now automatically configured as a data source in Grafana, and a **pre-built JMeter Performance Dashboard** is automatically loaded when Grafana starts.
 
-## What's Configured
+## ✅ What's Already Configured
 
-### ✅ Auto-Provisioned Data Source
+### Auto-Provisioned Data Source
 - **Name**: InfluxDB-JMeter
 - **Type**: InfluxDB
 - **URL**: http://influxdb:8086
 - **Database**: jmeter
 - **Status**: Set as default data source
+
+### Auto-Provisioned Dashboard
+**JMeter Performance Dashboard** includes 8 panels:
+1. **Response Time Percentiles** - 90th, 95th, 99th percentiles and average
+2. **Throughput** - Requests per second
+3. **Error Rate %** - Percentage of failed requests
+4. **Active Threads** - Current number of active virtual users
+5. **Total Requests (Success)** - Count of successful requests
+6. **Total Errors** - Count of failed requests
+7. **Response Time by Transaction** - Individual transaction performance
+8. **Requests Over Time** - Success vs Error comparison
 
 ## How to Access Grafana
 
@@ -24,10 +35,15 @@ InfluxDB is now automatically configured as a data source in Grafana. When you s
    - Username: `admin`
    - Password: `admin`
 
-3. **Verify Data Source:**
+3. **Access the Dashboard:**
+   - Go to **Dashboards** → **Browse**
+   - Look for **JMeter** folder
+   - Click on **JMeter Performance Dashboard**
+   - The dashboard is pre-configured and ready to display your test data!
+
+4. **Verify Data Source (Optional):**
    - Go to **Configuration** (gear icon) → **Data Sources**
    - You should see `InfluxDB-JMeter` already configured ✅
-   - Click "Test" to verify the connection
 
 ## Creating Your First Dashboard
 

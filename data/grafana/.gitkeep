@@ -1,0 +1,4 @@
+# This file ensures the data/grafana directory is tracked by git
+# The actual Grafana data files are ignored via .gitignore
+# 
+# Grafana stores dashboards and settings here, which persist across container restarts
