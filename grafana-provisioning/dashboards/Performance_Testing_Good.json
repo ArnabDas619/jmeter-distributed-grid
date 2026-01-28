@@ -1,14 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_TELEGRAF",
-      "label": "telegraf",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "influxdb",
-      "pluginName": "InfluxDB"
-    }
-  ],
   "__requires": [
     {
       "type": "panel",
@@ -36,8 +26,8 @@
     },
     {
       "type": "datasource",
-      "id": "influxdb",
-      "name": "InfluxDB",
+      "id": \"InfluxDB-JMeter\",
+      "name": \"InfluxDB-JMeter\",
       "version": "1.0.0"
     },
     {
@@ -208,7 +198,7 @@
       "pluginVersion": "8.2.5",
       "targets": [
         {
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "last",
@@ -304,7 +294,7 @@
       "pluginVersion": "8.2.5",
       "targets": [
         {
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "last",
@@ -406,7 +396,7 @@
       "pluginVersion": "8.2.5",
       "targets": [
         {
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "last",
@@ -517,7 +507,7 @@
       "pluginVersion": "8.2.5",
       "targets": [
         {
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "last",
@@ -626,7 +616,7 @@
       "targets": [
         {
           "alias": "fail",
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "last",
@@ -789,7 +779,7 @@
       "targets": [
         {
           "alias": "",
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "last",
@@ -906,7 +896,7 @@
       "targets": [
         {
           "alias": "active-user",
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "max",
@@ -1211,7 +1201,7 @@
       "targets": [
         {
           "alias": "$tag_Transaction",
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "max",
@@ -1288,7 +1278,7 @@
         },
         {
           "alias": "Users Count",
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "max",
@@ -1913,7 +1903,7 @@
       "targets": [
         {
           "alias": "",
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "last",
@@ -2033,7 +2023,7 @@
       "pluginVersion": "8.2.5",
       "targets": [
         {
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "last",
@@ -2140,7 +2130,7 @@
       "pluginVersion": "8.2.5",
       "targets": [
         {
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "last",
@@ -2264,7 +2254,7 @@
       "pluginVersion": "8.2.5",
       "targets": [
         {
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "last",
@@ -2384,7 +2374,7 @@
       "pluginVersion": "8.2.5",
       "targets": [
         {
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "last",
@@ -2504,7 +2494,7 @@
       "pluginVersion": "8.2.5",
       "targets": [
         {
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "last",
@@ -2623,7 +2613,7 @@
       "pluginVersion": "8.2.5",
       "targets": [
         {
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "last",
@@ -2743,7 +2733,7 @@
       "targets": [
         {
           "alias": "$col",
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "max",
@@ -2836,7 +2826,7 @@
         },
         {
           "alias": "Err/Sec",
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "max",
@@ -3006,7 +2996,7 @@
       "targets": [
         {
           "alias": "$col",
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "max",
@@ -3111,7 +3101,7 @@
         },
         {
           "alias": "$col",
-          "dsType": "influxdb",
+          "dsType": \"InfluxDB-JMeter\",
           "fields": [
             {
               "func": "max",
@@ -3415,7 +3405,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_TELEGRAF}",
+          "datasource": \"InfluxDB-JMeter\",
           "fill": 1,
           "fillGradient": 0,
           "gridPos": {
@@ -3455,7 +3445,7 @@
           "targets": [
             {
               "alias": "$tag_host - Used",
-              "dsType": "influxdb",
+              "dsType": \"InfluxDB-JMeter\",
               "groupBy": [
                 {
                   "params": [
@@ -3511,7 +3501,7 @@
             },
             {
               "alias": "$tag_host - Idle",
-              "dsType": "influxdb",
+              "dsType": \"InfluxDB-JMeter\",
               "groupBy": [
                 {
                   "params": [
@@ -3606,7 +3596,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_TELEGRAF}",
+          "datasource": \"InfluxDB-JMeter\",
           "fill": 1,
           "fillGradient": 0,
           "gridPos": {
@@ -3645,7 +3635,7 @@
           "targets": [
             {
               "alias": "$tag_host",
-              "dsType": "influxdb",
+              "dsType": \"InfluxDB-JMeter\",
               "groupBy": [
                 {
                   "params": [
@@ -3740,7 +3730,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_TELEGRAF}",
+          "datasource": \"InfluxDB-JMeter\",
           "fill": 1,
           "fillGradient": 0,
           "gridPos": {
@@ -3779,7 +3769,7 @@
           "targets": [
             {
               "alias": "$tag_host",
-              "dsType": "influxdb",
+              "dsType": \"InfluxDB-JMeter\",
               "groupBy": [
                 {
                   "params": [
@@ -3874,7 +3864,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_TELEGRAF}",
+          "datasource": \"InfluxDB-JMeter\",
           "fill": 1,
           "fillGradient": 0,
           "gridPos": {
@@ -3914,7 +3904,7 @@
           "targets": [
             {
               "alias": "$tag_host - $col",
-              "dsType": "influxdb",
+              "dsType": \"InfluxDB-JMeter\",
               "groupBy": [
                 {
                   "params": [
@@ -4168,7 +4158,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_TELEGRAF}",
+          "datasource": \"InfluxDB-JMeter\",
           "fill": 1,
           "fillGradient": 0,
           "gridPos": {
@@ -4207,7 +4197,7 @@
           "targets": [
             {
               "alias": "$tag_host",
-              "dsType": "influxdb",
+              "dsType": \"InfluxDB-JMeter\",
               "groupBy": [
                 {
                   "params": [
@@ -4302,7 +4292,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_TELEGRAF}",
+          "datasource": \"InfluxDB-JMeter\",
           "fill": 1,
           "fillGradient": 0,
           "gridPos": {
@@ -4341,7 +4331,7 @@
           "targets": [
             {
               "alias": "$tag_host",
-              "dsType": "influxdb",
+              "dsType": \"InfluxDB-JMeter\",
               "groupBy": [
                 {
                   "params": [
@@ -4436,7 +4426,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_TELEGRAF}",
+          "datasource": \"InfluxDB-JMeter\",
           "fill": 1,
           "fillGradient": 0,
           "gridPos": {
@@ -4475,7 +4465,7 @@
           "targets": [
             {
               "alias": "$tag_host",
-              "dsType": "influxdb",
+              "dsType": \"InfluxDB-JMeter\",
               "groupBy": [
                 {
                   "params": [
@@ -4576,7 +4566,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_TELEGRAF}",
+          "datasource": \"InfluxDB-JMeter\",
           "fill": 1,
           "fillGradient": 0,
           "gridPos": {
@@ -4615,7 +4605,7 @@
           "targets": [
             {
               "alias": "$tag_host",
-              "dsType": "influxdb",
+              "dsType": \"InfluxDB-JMeter\",
               "groupBy": [
                 {
                   "params": [
@@ -4710,7 +4700,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_TELEGRAF}",
+          "datasource": \"InfluxDB-JMeter\",
           "fill": 1,
           "fillGradient": 0,
           "gridPos": {
@@ -4929,8 +4919,8 @@
       {
         "current": {
           "selected": false,
-          "text": "InfluxDB",
-          "value": "InfluxDB"
+          "text": \"InfluxDB-JMeter\",
+          "value": \"InfluxDB-JMeter\"
         },
         "description": null,
         "error": null,
@@ -4940,7 +4930,7 @@
         "multi": false,
         "name": "DataSource",
         "options": [],
-        "query": "influxdb",
+        "query": \"InfluxDB-JMeter\",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -4995,7 +4985,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_TELEGRAF}",
+        "datasource": \"InfluxDB-JMeter\",
         "definition": "Select \"host\",\"Percent_User_Time\" from \"win_cpu\" WHERE $timeFilter",
         "description": null,
         "error": null,

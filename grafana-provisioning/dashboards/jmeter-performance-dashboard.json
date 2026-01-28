@@ -1,1261 +1,1261 @@
 {
-    "annotations": {
-        "list": [
-            {
-                "builtIn": 1,
-                "datasource": {
-                    "type": "datasource",
-                    "uid": "grafana"
-                },
-                "enable": true,
-                "hide": true,
-                "iconColor": "rgba(0, 211, 255, 1)",
-                "name": "Annotations & Alerts",
-                "type": "dashboard"
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": 3,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "PDF285FD14425B85D"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
             }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": [
+          {
+            "__systemRef": "hideSeriesFrom",
+            "matcher": {
+              "id": "byNames",
+              "options": {
+                "mode": "exclude",
+                "names": [
+                  "jmeter.90th Percentile"
+                ],
+                "prefix": "All except:",
+                "readOnly": true
+              }
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": true,
+                  "viz": true
+                }
+              }
+            ]
+          }
         ]
-    },
-    "editable": true,
-    "fiscalYearStartMonth": 0,
-    "graphTooltip": 1,
-    "id": 2,
-    "links": [],
-    "panels": [
-        {
-            "datasource": {
-                "type": "influxdb",
-                "uid": "PDF285FD14425B85D"
-            },
-            "fieldConfig": {
-                "defaults": {
-                    "color": {
-                        "mode": "palette-classic"
-                    },
-                    "custom": {
-                        "axisBorderShow": false,
-                        "axisCenteredZero": false,
-                        "axisColorMode": "text",
-                        "axisLabel": "",
-                        "axisPlacement": "auto",
-                        "barAlignment": 0,
-                        "barWidthFactor": 0.6,
-                        "drawStyle": "line",
-                        "fillOpacity": 10,
-                        "gradientMode": "none",
-                        "hideFrom": {
-                            "legend": false,
-                            "tooltip": false,
-                            "viz": false
-                        },
-                        "insertNulls": false,
-                        "lineInterpolation": "linear",
-                        "lineWidth": 2,
-                        "pointSize": 5,
-                        "scaleDistribution": {
-                            "type": "linear"
-                        },
-                        "showPoints": "never",
-                        "showValues": false,
-                        "spanNulls": false,
-                        "stacking": {
-                            "group": "A",
-                            "mode": "none"
-                        },
-                        "thresholdsStyle": {
-                            "mode": "off"
-                        }
-                    },
-                    "mappings": [],
-                    "thresholds": {
-                        "mode": "absolute",
-                        "steps": [
-                            {
-                                "color": "green",
-                                "value": 0
-                            }
-                        ]
-                    },
-                    "unit": "ms"
-                },
-                "overrides": [
-                    {
-                        "__systemRef": "hideSeriesFrom",
-                        "matcher": {
-                            "id": "byNames",
-                            "options": {
-                                "mode": "exclude",
-                                "names": [
-                                    "jmeter.90th Percentile"
-                                ],
-                                "prefix": "All except:",
-                                "readOnly": true
-                            }
-                        },
-                        "properties": [
-                            {
-                                "id": "custom.hideFrom",
-                                "value": {
-                                    "legend": false,
-                                    "tooltip": true,
-                                    "viz": true
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            "gridPos": {
-                "h": 8,
-                "w": 12,
-                "x": 0,
-                "y": 0
-            },
-            "id": 1,
-            "options": {
-                "legend": {
-                    "calcs": [
-                        "mean",
-                        "max"
-                    ],
-                    "displayMode": "table",
-                    "placement": "bottom",
-                    "showLegend": true
-                },
-                "tooltip": {
-                    "hideZeros": false,
-                    "mode": "multi",
-                    "sort": "none"
-                }
-            },
-            "pluginVersion": "12.3.1",
-            "targets": [
-                {
-                    "datasource": {
-                        "type": "influxdb",
-                        "uid": "influxdb"
-                    },
-                    "groupBy": [
-                        {
-                            "params": [
-                                "$__interval"
-                            ],
-                            "type": "time"
-                        },
-                        {
-                            "params": [
-                                "null"
-                            ],
-                            "type": "fill"
-                        }
-                    ],
-                    "measurement": "jmeter",
-                    "orderByTime": "ASC",
-                    "policy": "default",
-                    "refId": "A",
-                    "resultFormat": "time_series",
-                    "select": [
-                        [
-                            {
-                                "params": [
-                                    "avg"
-                                ],
-                                "type": "field"
-                            },
-                            {
-                                "params": [],
-                                "type": "mean"
-                            },
-                            {
-                                "params": [
-                                    "Average"
-                                ],
-                                "type": "alias"
-                            }
-                        ]
-                    ],
-                    "tags": [
-                        {
-                            "key": "statut",
-                            "operator": "=",
-                            "value": "ok"
-                        }
-                    ]
-                },
-                {
-                    "datasource": {
-                        "type": "influxdb",
-                        "uid": "influxdb"
-                    },
-                    "groupBy": [
-                        {
-                            "params": [
-                                "$__interval"
-                            ],
-                            "type": "time"
-                        },
-                        {
-                            "params": [
-                                "null"
-                            ],
-                            "type": "fill"
-                        }
-                    ],
-                    "hide": false,
-                    "measurement": "jmeter",
-                    "orderByTime": "ASC",
-                    "policy": "default",
-                    "refId": "B",
-                    "resultFormat": "time_series",
-                    "select": [
-                        [
-                            {
-                                "params": [
-                                    "pct90.0"
-                                ],
-                                "type": "field"
-                            },
-                            {
-                                "params": [],
-                                "type": "mean"
-                            },
-                            {
-                                "params": [
-                                    "90th Percentile"
-                                ],
-                                "type": "alias"
-                            }
-                        ]
-                    ],
-                    "tags": [
-                        {
-                            "key": "statut",
-                            "operator": "=",
-                            "value": "ok"
-                        }
-                    ]
-                },
-                {
-                    "datasource": {
-                        "type": "influxdb",
-                        "uid": "influxdb"
-                    },
-                    "groupBy": [
-                        {
-                            "params": [
-                                "$__interval"
-                            ],
-                            "type": "time"
-                        },
-                        {
-                            "params": [
-                                "null"
-                            ],
-                            "type": "fill"
-                        }
-                    ],
-                    "hide": false,
-                    "measurement": "jmeter",
-                    "orderByTime": "ASC",
-                    "policy": "default",
-                    "refId": "C",
-                    "resultFormat": "time_series",
-                    "select": [
-                        [
-                            {
-                                "params": [
-                                    "pct95.0"
-                                ],
-                                "type": "field"
-                            },
-                            {
-                                "params": [],
-                                "type": "mean"
-                            },
-                            {
-                                "params": [
-                                    "95th Percentile"
-                                ],
-                                "type": "alias"
-                            }
-                        ]
-                    ],
-                    "tags": [
-                        {
-                            "key": "statut",
-                            "operator": "=",
-                            "value": "ok"
-                        }
-                    ]
-                },
-                {
-                    "datasource": {
-                        "type": "influxdb",
-                        "uid": "influxdb"
-                    },
-                    "groupBy": [
-                        {
-                            "params": [
-                                "$__interval"
-                            ],
-                            "type": "time"
-                        },
-                        {
-                            "params": [
-                                "null"
-                            ],
-                            "type": "fill"
-                        }
-                    ],
-                    "hide": false,
-                    "measurement": "jmeter",
-                    "orderByTime": "ASC",
-                    "policy": "default",
-                    "refId": "D",
-                    "resultFormat": "time_series",
-                    "select": [
-                        [
-                            {
-                                "params": [
-                                    "pct99.0"
-                                ],
-                                "type": "field"
-                            },
-                            {
-                                "params": [],
-                                "type": "mean"
-                            },
-                            {
-                                "params": [
-                                    "99th Percentile"
-                                ],
-                                "type": "alias"
-                            }
-                        ]
-                    ],
-                    "tags": [
-                        {
-                            "key": "statut",
-                            "operator": "=",
-                            "value": "ok"
-                        }
-                    ]
-                }
-            ],
-            "title": "Response Time Percentiles",
-            "type": "timeseries"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "legend": {
+          "calcs": [
+            "mean",
+            "max"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
         },
-        {
-            "datasource": {
-                "type": "influxdb",
-                "uid": "PDF285FD14425B85D"
-            },
-            "fieldConfig": {
-                "defaults": {
-                    "color": {
-                        "mode": "palette-classic"
-                    },
-                    "custom": {
-                        "axisBorderShow": false,
-                        "axisCenteredZero": false,
-                        "axisColorMode": "text",
-                        "axisLabel": "",
-                        "axisPlacement": "auto",
-                        "barAlignment": 0,
-                        "barWidthFactor": 0.6,
-                        "drawStyle": "line",
-                        "fillOpacity": 20,
-                        "gradientMode": "none",
-                        "hideFrom": {
-                            "legend": false,
-                            "tooltip": false,
-                            "viz": false
-                        },
-                        "insertNulls": false,
-                        "lineInterpolation": "smooth",
-                        "lineWidth": 2,
-                        "pointSize": 5,
-                        "scaleDistribution": {
-                            "type": "linear"
-                        },
-                        "showPoints": "never",
-                        "showValues": false,
-                        "spanNulls": false,
-                        "stacking": {
-                            "group": "A",
-                            "mode": "none"
-                        },
-                        "thresholdsStyle": {
-                            "mode": "off"
-                        }
-                    },
-                    "mappings": [],
-                    "thresholds": {
-                        "mode": "absolute",
-                        "steps": [
-                            {
-                                "color": "green",
-                                "value": 0
-                            }
-                        ]
-                    },
-                    "unit": "reqps"
-                },
-                "overrides": []
-            },
-            "gridPos": {
-                "h": 8,
-                "w": 12,
-                "x": 12,
-                "y": 0
-            },
-            "id": 2,
-            "options": {
-                "legend": {
-                    "calcs": [
-                        "mean",
-                        "max"
-                    ],
-                    "displayMode": "table",
-                    "placement": "bottom",
-                    "showLegend": true
-                },
-                "tooltip": {
-                    "hideZeros": false,
-                    "mode": "multi",
-                    "sort": "none"
-                }
-            },
-            "pluginVersion": "12.3.1",
-            "targets": [
-                {
-                    "datasource": {
-                        "type": "influxdb",
-                        "uid": "influxdb"
-                    },
-                    "groupBy": [
-                        {
-                            "params": [
-                                "$__interval"
-                            ],
-                            "type": "time"
-                        },
-                        {
-                            "params": [
-                                "null"
-                            ],
-                            "type": "fill"
-                        }
-                    ],
-                    "measurement": "jmeter",
-                    "orderByTime": "ASC",
-                    "policy": "default",
-                    "refId": "A",
-                    "resultFormat": "time_series",
-                    "select": [
-                        [
-                            {
-                                "params": [
-                                    "count"
-                                ],
-                                "type": "field"
-                            },
-                            {
-                                "params": [],
-                                "type": "mean"
-                            },
-                            {
-                                "params": [
-                                    "/ 5"
-                                ],
-                                "type": "math"
-                            },
-                            {
-                                "params": [
-                                    "Throughput"
-                                ],
-                                "type": "alias"
-                            }
-                        ]
-                    ],
-                    "tags": []
-                }
-            ],
-            "title": "Throughput (Requests/sec)",
-            "type": "timeseries"
-        },
-        {
-            "datasource": {
-                "type": "influxdb",
-                "uid": "PDF285FD14425B85D"
-            },
-            "fieldConfig": {
-                "defaults": {
-                    "color": {
-                        "mode": "thresholds"
-                    },
-                    "mappings": [],
-                    "thresholds": {
-                        "mode": "absolute",
-                        "steps": [
-                            {
-                                "color": "green",
-                                "value": 0
-                            },
-                            {
-                                "color": "red",
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "unit": "percent"
-                },
-                "overrides": []
-            },
-            "gridPos": {
-                "h": 4,
-                "w": 6,
-                "x": 0,
-                "y": 8
-            },
-            "id": 3,
-            "options": {
-                "minVizHeight": 75,
-                "minVizWidth": 75,
-                "orientation": "auto",
-                "reduceOptions": {
-                    "calcs": [
-                        "lastNotNull"
-                    ],
-                    "fields": "",
-                    "values": false
-                },
-                "showThresholdLabels": false,
-                "showThresholdMarkers": true,
-                "sizing": "auto"
-            },
-            "pluginVersion": "12.3.1",
-            "targets": [
-                {
-                    "datasource": {
-                        "type": "influxdb",
-                        "uid": "influxdb"
-                    },
-                    "groupBy": [
-                        {
-                            "params": [
-                                "$__interval"
-                            ],
-                            "type": "time"
-                        },
-                        {
-                            "params": [
-                                "null"
-                            ],
-                            "type": "fill"
-                        }
-                    ],
-                    "measurement": "jmeter",
-                    "orderByTime": "ASC",
-                    "policy": "default",
-                    "refId": "A",
-                    "resultFormat": "time_series",
-                    "select": [
-                        [
-                            {
-                                "params": [
-                                    "countError"
-                                ],
-                                "type": "field"
-                            },
-                            {
-                                "params": [],
-                                "type": "sum"
-                            }
-                        ],
-                        [
-                            {
-                                "params": [
-                                    "count"
-                                ],
-                                "type": "field"
-                            },
-                            {
-                                "params": [],
-                                "type": "sum"
-                            }
-                        ]
-                    ],
-                    "tags": []
-                }
-            ],
-            "title": "Error Rate %",
-            "transformations": [
-                {
-                    "id": "calculateField",
-                    "options": {
-                        "binary": {
-                            "left": "jmeter.sum {select_field=\"countError\"}",
-                            "operator": "/",
-                            "right": "jmeter.sum {select_field=\"count\"}"
-                        },
-                        "mode": "binary",
-                        "reduce": {
-                            "reducer": "sum"
-                        },
-                        "replaceFields": true
-                    }
-                },
-                {
-                    "id": "calculateField",
-                    "options": {
-                        "binary": {
-                            "left": "jmeter.sum {select_field=\"countError\"} / jmeter.sum {select_field=\"count\"}",
-                            "operator": "*",
-                            "right": "100"
-                        },
-                        "mode": "binary",
-                        "replaceFields": false
-                    }
-                }
-            ],
-            "type": "gauge"
-        },
-        {
-            "datasource": {
-                "type": "influxdb",
-                "uid": "PDF285FD14425B85D"
-            },
-            "fieldConfig": {
-                "defaults": {
-                    "color": {
-                        "mode": "thresholds"
-                    },
-                    "mappings": [],
-                    "thresholds": {
-                        "mode": "absolute",
-                        "steps": [
-                            {
-                                "color": "green",
-                                "value": 0
-                            }
-                        ]
-                    },
-                    "unit": "short"
-                },
-                "overrides": []
-            },
-            "gridPos": {
-                "h": 4,
-                "w": 6,
-                "x": 6,
-                "y": 8
-            },
-            "id": 4,
-            "options": {
-                "minVizHeight": 75,
-                "minVizWidth": 75,
-                "orientation": "auto",
-                "reduceOptions": {
-                    "calcs": [
-                        "lastNotNull"
-                    ],
-                    "fields": "",
-                    "values": false
-                },
-                "showThresholdLabels": false,
-                "showThresholdMarkers": true,
-                "sizing": "auto"
-            },
-            "pluginVersion": "12.3.1",
-            "targets": [
-                {
-                    "datasource": {
-                        "type": "influxdb",
-                        "uid": "influxdb"
-                    },
-                    "groupBy": [
-                        {
-                            "params": [
-                                "$__interval"
-                            ],
-                            "type": "time"
-                        },
-                        {
-                            "params": [
-                                "null"
-                            ],
-                            "type": "fill"
-                        }
-                    ],
-                    "measurement": "jmeter",
-                    "orderByTime": "ASC",
-                    "policy": "default",
-                    "refId": "A",
-                    "resultFormat": "time_series",
-                    "select": [
-                        [
-                            {
-                                "params": [
-                                    "maxAT"
-                                ],
-                                "type": "field"
-                            },
-                            {
-                                "params": [],
-                                "type": "max"
-                            }
-                        ]
-                    ],
-                    "tags": []
-                }
-            ],
-            "title": "Active Threads",
-            "type": "gauge"
-        },
-        {
-            "datasource": {
-                "type": "influxdb",
-                "uid": "PDF285FD14425B85D"
-            },
-            "fieldConfig": {
-                "defaults": {
-                    "color": {
-                        "mode": "thresholds"
-                    },
-                    "mappings": [],
-                    "thresholds": {
-                        "mode": "absolute",
-                        "steps": [
-                            {
-                                "color": "green",
-                                "value": 0
-                            }
-                        ]
-                    },
-                    "unit": "short"
-                },
-                "overrides": []
-            },
-            "gridPos": {
-                "h": 4,
-                "w": 6,
-                "x": 12,
-                "y": 8
-            },
-            "id": 5,
-            "options": {
-                "colorMode": "value",
-                "graphMode": "area",
-                "justifyMode": "auto",
-                "orientation": "auto",
-                "percentChangeColorMode": "standard",
-                "reduceOptions": {
-                    "calcs": [
-                        "sum"
-                    ],
-                    "fields": "",
-                    "values": false
-                },
-                "showPercentChange": false,
-                "textMode": "auto",
-                "wideLayout": true
-            },
-            "pluginVersion": "12.3.1",
-            "targets": [
-                {
-                    "datasource": {
-                        "type": "influxdb",
-                        "uid": "influxdb"
-                    },
-                    "groupBy": [
-                        {
-                            "params": [
-                                "$__interval"
-                            ],
-                            "type": "time"
-                        },
-                        {
-                            "params": [
-                                "null"
-                            ],
-                            "type": "fill"
-                        }
-                    ],
-                    "measurement": "jmeter",
-                    "orderByTime": "ASC",
-                    "policy": "default",
-                    "refId": "A",
-                    "resultFormat": "time_series",
-                    "select": [
-                        [
-                            {
-                                "params": [
-                                    "count"
-                                ],
-                                "type": "field"
-                            },
-                            {
-                                "params": [],
-                                "type": "sum"
-                            }
-                        ]
-                    ],
-                    "tags": [
-                        {
-                            "key": "statut",
-                            "operator": "=",
-                            "value": "ok"
-                        }
-                    ]
-                }
-            ],
-            "title": "Total Requests (Success)",
-            "type": "stat"
-        },
-        {
-            "datasource": {
-                "type": "influxdb",
-                "uid": "PDF285FD14425B85D"
-            },
-            "fieldConfig": {
-                "defaults": {
-                    "color": {
-                        "mode": "thresholds"
-                    },
-                    "mappings": [],
-                    "thresholds": {
-                        "mode": "absolute",
-                        "steps": [
-                            {
-                                "color": "green",
-                                "value": 0
-                            },
-                            {
-                                "color": "red",
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "unit": "short"
-                },
-                "overrides": []
-            },
-            "gridPos": {
-                "h": 4,
-                "w": 6,
-                "x": 18,
-                "y": 8
-            },
-            "id": 6,
-            "options": {
-                "colorMode": "value",
-                "graphMode": "area",
-                "justifyMode": "auto",
-                "orientation": "auto",
-                "percentChangeColorMode": "standard",
-                "reduceOptions": {
-                    "calcs": [
-                        "sum"
-                    ],
-                    "fields": "",
-                    "values": false
-                },
-                "showPercentChange": false,
-                "textMode": "auto",
-                "wideLayout": true
-            },
-            "pluginVersion": "12.3.1",
-            "targets": [
-                {
-                    "datasource": {
-                        "type": "influxdb",
-                        "uid": "influxdb"
-                    },
-                    "groupBy": [
-                        {
-                            "params": [
-                                "$__interval"
-                            ],
-                            "type": "time"
-                        },
-                        {
-                            "params": [
-                                "null"
-                            ],
-                            "type": "fill"
-                        }
-                    ],
-                    "measurement": "jmeter",
-                    "orderByTime": "ASC",
-                    "policy": "default",
-                    "refId": "A",
-                    "resultFormat": "time_series",
-                    "select": [
-                        [
-                            {
-                                "params": [
-                                    "countError"
-                                ],
-                                "type": "field"
-                            },
-                            {
-                                "params": [],
-                                "type": "sum"
-                            }
-                        ]
-                    ],
-                    "tags": []
-                }
-            ],
-            "title": "Total Errors",
-            "type": "stat"
-        },
-        {
-            "datasource": {
-                "type": "influxdb",
-                "uid": "PDF285FD14425B85D"
-            },
-            "fieldConfig": {
-                "defaults": {
-                    "color": {
-                        "mode": "palette-classic"
-                    },
-                    "custom": {
-                        "axisBorderShow": false,
-                        "axisCenteredZero": false,
-                        "axisColorMode": "text",
-                        "axisLabel": "",
-                        "axisPlacement": "auto",
-                        "barAlignment": 0,
-                        "barWidthFactor": 0.6,
-                        "drawStyle": "line",
-                        "fillOpacity": 10,
-                        "gradientMode": "none",
-                        "hideFrom": {
-                            "legend": false,
-                            "tooltip": false,
-                            "viz": false
-                        },
-                        "insertNulls": false,
-                        "lineInterpolation": "linear",
-                        "lineWidth": 2,
-                        "pointSize": 5,
-                        "scaleDistribution": {
-                            "type": "linear"
-                        },
-                        "showPoints": "never",
-                        "showValues": false,
-                        "spanNulls": false,
-                        "stacking": {
-                            "group": "A",
-                            "mode": "none"
-                        },
-                        "thresholdsStyle": {
-                            "mode": "off"
-                        }
-                    },
-                    "mappings": [],
-                    "thresholds": {
-                        "mode": "absolute",
-                        "steps": [
-                            {
-                                "color": "green",
-                                "value": 0
-                            }
-                        ]
-                    },
-                    "unit": "ms"
-                },
-                "overrides": []
-            },
-            "gridPos": {
-                "h": 8,
-                "w": 12,
-                "x": 0,
-                "y": 12
-            },
-            "id": 7,
-            "options": {
-                "legend": {
-                    "calcs": [
-                        "mean",
-                        "max"
-                    ],
-                    "displayMode": "table",
-                    "placement": "bottom",
-                    "showLegend": true
-                },
-                "tooltip": {
-                    "hideZeros": false,
-                    "mode": "multi",
-                    "sort": "none"
-                }
-            },
-            "pluginVersion": "12.3.1",
-            "targets": [
-                {
-                    "datasource": {
-                        "type": "influxdb",
-                        "uid": "influxdb"
-                    },
-                    "groupBy": [
-                        {
-                            "params": [
-                                "$__interval"
-                            ],
-                            "type": "time"
-                        },
-                        {
-                            "params": [
-                                "transaction"
-                            ],
-                            "type": "tag"
-                        },
-                        {
-                            "params": [
-                                "null"
-                            ],
-                            "type": "fill"
-                        }
-                    ],
-                    "measurement": "jmeter",
-                    "orderByTime": "ASC",
-                    "policy": "default",
-                    "refId": "A",
-                    "resultFormat": "time_series",
-                    "select": [
-                        [
-                            {
-                                "params": [
-                                    "avg"
-                                ],
-                                "type": "field"
-                            },
-                            {
-                                "params": [],
-                                "type": "mean"
-                            }
-                        ]
-                    ],
-                    "tags": [
-                        {
-                            "key": "statut",
-                            "operator": "=",
-                            "value": "ok"
-                        },
-                        {
-                            "condition": "AND",
-                            "key": "transaction",
-                            "operator": "!=",
-                            "value": "all"
-                        }
-                    ]
-                }
-            ],
-            "title": "Response Time by Transaction",
-            "type": "timeseries"
-        },
-        {
-            "datasource": {
-                "type": "influxdb",
-                "uid": "PDF285FD14425B85D"
-            },
-            "fieldConfig": {
-                "defaults": {
-                    "color": {
-                        "mode": "palette-classic"
-                    },
-                    "custom": {
-                        "axisBorderShow": false,
-                        "axisCenteredZero": false,
-                        "axisColorMode": "text",
-                        "axisLabel": "",
-                        "axisPlacement": "auto",
-                        "barAlignment": 0,
-                        "barWidthFactor": 0.6,
-                        "drawStyle": "bars",
-                        "fillOpacity": 100,
-                        "gradientMode": "none",
-                        "hideFrom": {
-                            "legend": false,
-                            "tooltip": false,
-                            "viz": false
-                        },
-                        "insertNulls": false,
-                        "lineInterpolation": "linear",
-                        "lineWidth": 1,
-                        "pointSize": 5,
-                        "scaleDistribution": {
-                            "type": "linear"
-                        },
-                        "showPoints": "never",
-                        "showValues": false,
-                        "spanNulls": false,
-                        "stacking": {
-                            "group": "A",
-                            "mode": "normal"
-                        },
-                        "thresholdsStyle": {
-                            "mode": "off"
-                        }
-                    },
-                    "mappings": [],
-                    "thresholds": {
-                        "mode": "absolute",
-                        "steps": [
-                            {
-                                "color": "green",
-                                "value": 0
-                            }
-                        ]
-                    },
-                    "unit": "short"
-                },
-                "overrides": []
-            },
-            "gridPos": {
-                "h": 8,
-                "w": 12,
-                "x": 12,
-                "y": 12
-            },
-            "id": 8,
-            "options": {
-                "legend": {
-                    "calcs": [],
-                    "displayMode": "list",
-                    "placement": "bottom",
-                    "showLegend": true
-                },
-                "tooltip": {
-                    "hideZeros": false,
-                    "mode": "multi",
-                    "sort": "none"
-                }
-            },
-            "pluginVersion": "12.3.1",
-            "targets": [
-                {
-                    "datasource": {
-                        "type": "influxdb",
-                        "uid": "influxdb"
-                    },
-                    "groupBy": [
-                        {
-                            "params": [
-                                "$__interval"
-                            ],
-                            "type": "time"
-                        },
-                        {
-                            "params": [
-                                "null"
-                            ],
-                            "type": "fill"
-                        }
-                    ],
-                    "measurement": "jmeter",
-                    "orderByTime": "ASC",
-                    "policy": "default",
-                    "refId": "A",
-                    "resultFormat": "time_series",
-                    "select": [
-                        [
-                            {
-                                "params": [
-                                    "count"
-                                ],
-                                "type": "field"
-                            },
-                            {
-                                "params": [],
-                                "type": "sum"
-                            },
-                            {
-                                "params": [
-                                    "Success"
-                                ],
-                                "type": "alias"
-                            }
-                        ]
-                    ],
-                    "tags": [
-                        {
-                            "key": "statut",
-                            "operator": "=",
-                            "value": "ok"
-                        }
-                    ]
-                },
-                {
-                    "datasource": {
-                        "type": "influxdb",
-                        "uid": "influxdb"
-                    },
-                    "groupBy": [
-                        {
-                            "params": [
-                                "$__interval"
-                            ],
-                            "type": "time"
-                        },
-                        {
-                            "params": [
-                                "null"
-                            ],
-                            "type": "fill"
-                        }
-                    ],
-                    "hide": false,
-                    "measurement": "jmeter",
-                    "orderByTime": "ASC",
-                    "policy": "default",
-                    "refId": "B",
-                    "resultFormat": "time_series",
-                    "select": [
-                        [
-                            {
-                                "params": [
-                                    "countError"
-                                ],
-                                "type": "field"
-                            },
-                            {
-                                "params": [],
-                                "type": "sum"
-                            },
-                            {
-                                "params": [
-                                    "Errors"
-                                ],
-                                "type": "alias"
-                            }
-                        ]
-                    ],
-                    "tags": []
-                }
-            ],
-            "title": "Requests Over Time (Success vs Errors)",
-            "type": "timeseries"
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
         }
-    ],
-    "preload": false,
-    "refresh": "5s",
-    "schemaVersion": 42,
-    "tags": [
-        "jmeter",
-        "performance"
-    ],
-    "templating": {
-        "list": []
+      },
+      "pluginVersion": "12.3.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influxdb"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "jmeter",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "avg"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [
+                  "Average"
+                ],
+                "type": "alias"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "statut",
+              "operator": "=",
+              "value": "ok"
+            }
+          ]
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influxdb"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "jmeter",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "pct90.0"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [
+                  "90th Percentile"
+                ],
+                "type": "alias"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "statut",
+              "operator": "=",
+              "value": "ok"
+            }
+          ]
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influxdb"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "jmeter",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "pct95.0"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [
+                  "95th Percentile"
+                ],
+                "type": "alias"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "statut",
+              "operator": "=",
+              "value": "ok"
+            }
+          ]
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influxdb"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "jmeter",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "pct99.0"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [
+                  "99th Percentile"
+                ],
+                "type": "alias"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "statut",
+              "operator": "=",
+              "value": "ok"
+            }
+          ]
+        }
+      ],
+      "title": "Response Time Percentiles",
+      "type": "timeseries"
     },
-    "time": {
-        "from": "now-15m",
-        "to": "now"
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "PDF285FD14425B85D"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 20,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "reqps"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [
+            "mean",
+            "max"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.3.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influxdb"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "jmeter",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "count"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [
+                  "/ 5"
+                ],
+                "type": "math"
+              },
+              {
+                "params": [
+                  "Throughput"
+                ],
+                "type": "alias"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "title": "Throughput (Requests/sec)",
+      "type": "timeseries"
     },
-    "timepicker": {},
-    "timezone": "",
-    "title": "JMeter Performance Dashboard",
-    "uid": "jmeter-performance",
-    "version": 1
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "PDF285FD14425B85D"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 0,
+        "y": 8
+      },
+      "id": 3,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto"
+      },
+      "pluginVersion": "12.3.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influxdb"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "jmeter",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "countError"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "sum"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "count"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "sum"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "title": "Error Rate %",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "jmeter.sum {select_field=\"countError\"}",
+              "operator": "/",
+              "right": "jmeter.sum {select_field=\"count\"}"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": true
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "jmeter.sum {select_field=\"countError\"} / jmeter.sum {select_field=\"count\"}",
+              "operator": "*",
+              "right": "100"
+            },
+            "mode": "binary",
+            "replaceFields": false
+          }
+        }
+      ],
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "PDF285FD14425B85D"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 6,
+        "y": 8
+      },
+      "id": 4,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto"
+      },
+      "pluginVersion": "12.3.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influxdb"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "jmeter",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "maxAT"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "max"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "title": "Active Threads",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "PDF285FD14425B85D"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 12,
+        "y": 8
+      },
+      "id": 5,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "sum"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.3.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influxdb"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "jmeter",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "count"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "sum"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "statut",
+              "operator": "=",
+              "value": "ok"
+            }
+          ]
+        }
+      ],
+      "title": "Total Requests (Success)",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "PDF285FD14425B85D"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 18,
+        "y": 8
+      },
+      "id": 6,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "sum"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.3.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influxdb"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "jmeter",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "countError"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "sum"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "title": "Total Errors",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "PDF285FD14425B85D"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 12
+      },
+      "id": 7,
+      "options": {
+        "legend": {
+          "calcs": [
+            "mean",
+            "max"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.3.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influxdb"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "transaction"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "jmeter",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "avg"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "statut",
+              "operator": "=",
+              "value": "ok"
+            },
+            {
+              "condition": "AND",
+              "key": "transaction",
+              "operator": "!=",
+              "value": "all"
+            }
+          ]
+        }
+      ],
+      "title": "Response Time by Transaction",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "PDF285FD14425B85D"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "bars",
+            "fillOpacity": 100,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "normal"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 12
+      },
+      "id": 8,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.3.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influxdb"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "jmeter",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "count"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "sum"
+              },
+              {
+                "params": [
+                  "Success"
+                ],
+                "type": "alias"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "statut",
+              "operator": "=",
+              "value": "ok"
+            }
+          ]
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influxdb"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "jmeter",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "countError"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "sum"
+              },
+              {
+                "params": [
+                  "Errors"
+                ],
+                "type": "alias"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "title": "Requests Over Time (Success vs Errors)",
+      "type": "timeseries"
+    }
+  ],
+  "preload": false,
+  "refresh": "5s",
+  "schemaVersion": 42,
+  "tags": [
+    "jmeter",
+    "performance"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-15m",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "JMeter Performance Dashboard",
+  "uid": "jmeter-performance",
+  "version": 1
 }
